@@ -176,3 +176,31 @@ if (dynamicContainer) {
     //dynamicContainer.prepend(card); // prepend to the beginning of the container
     dynamicContainer.appendChild(card); // append to the end of the container
 }
+
+
+
+function demoClick() {
+    console.log("You clicked the button!");
+}
+
+
+document.getElementById("create-event-btn").addEventListener("mouseover", demoClick);
+
+
+const browseBtn = document.getElementById('browse-events-btn');
+const featuredSection = document.getElementById('featured-events-section');
+
+if (browseBtn && featuredSection) {
+
+    browseBtn.addEventListener('click', () => {
+        featuredSection.scrollIntoView({behavior: 'smooth'});
+    });
+
+}
+
+
+
+
+
+
+
