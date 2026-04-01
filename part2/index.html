@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<!-- Header -->
+<header class="fixed top-0 w-full bg-slate-900 shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-slate-700 rounded flex items-center justify-center">
+        <!-- Calendar Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24"
+             stroke="currentColor">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                d="M8 7V3M16 7V3M4 11h16M5 21h14a2 2 0 002-2V7H3v12a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <span class="text-white font-semibold text-lg">Event App</span>
+    </div>
+
+    <!-- Navigation - id="main-nav" -->
+    <nav id="main-nav" class="hidden md:flex items-center gap-8">
+      <a id="home-link" href="#" class="text-slate-300 hover:text-white transition">Home</a>
+      <a href="#" class="text-slate-300 hover:text-white transition">About</a>
+      <a href="#" class="text-slate-300 hover:text-white transition">Features</a>
+      <a href="#" class="text-slate-300 hover:text-white transition">Contact</a>
+    </nav>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-4">
+      <a href="#" class="hidden md:block text-slate-300 hover:text-white transition">
+        Sign In
+      </a>
+      <button class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full transition shadow-sm">
+        Get Started
+      </button>
+    </div>
+
+  </div>
+</header>
+<main class="pt-24">
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-white to-slate-50 py-24 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Badge -->
+      <div class="inline-block mb-6 px-4 py-1 rounded-full bg-red-50 text-red-600 text-sm font-medium">
+        New Platform
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+        Welcome to Event App
+      </h1>
+
+      <!-- Paragraph -->
+      <p class="text-slate-600 text-lg mb-10 max-w-xl mx-auto">
+        Effortlessly create, manage, and discover events with a modern platform designed for seamless
+        experiences.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+        <!-- Primary -->
+        <button class="px-8 py-3 rounded-xl bg-red-600 text-white font-medium shadow-sm hover:bg-red-700 hover:shadow-md hover:scale-105 transition">
+          Create Event
+        </button>
+
+        <!-- Secondary - id="browse-events-btn"-->
+        <button id="browse-events-btn" class="px-8 py-3 rounded-xl border border-slate-200 text-slate-700 font-medium bg-white hover:shadow-md hover:scale-105 transition">
+          Browse Events
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Events - id="featured-events-section"-->
+  <section id="featured-events-section" class="py-20 px-6 bg-slate-50">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Header Row -->
+      <div class="flex items-center justify-between mb-10">
+        <div>
+          <p class="text-sm text-slate-500 mb-1">Discover</p>
+          <h2 class="text-3xl font-semibold text-slate-900">Featured Events</h2>
+        </div>
+        <a href="#" class="text-sm text-slate-600 hover:text-slate-900 transition">
+          View All Events →
+        </a>
+      </div>
+
+      <!-- Grid - id="dynamic-events" -->
+      <div id="dynamic-events" class="grid md:grid-cols-3 gap-6">
+
+        <!-- Music -->
+        <article
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition">
+          <img
+                  src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2"
+                  alt="Concert crowd with stage lights"
+                  loading="lazy"
+                  class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105"
+          />
+          <span class="inline-block bg-red-50 text-red-600 text-xs px-2 py-1 rounded mb-3">Music</span>
+          <div class="text-sm text-slate-500 mb-2">Aug 24 · 7:00 PM</div>
+          <h3 class="text-slate-900 font-semibold mb-2">Live Concert Night</h3>
+          <div class="text-sm text-slate-500 mb-1">Stockholm Arena</div>
+          <div class="text-sm text-slate-500 mb-4">320 Attendees</div>
+          <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">View
+            Event
+          </button>
+        </article>
+
+        <!-- Tech -->
+        <article
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition">
+          <img
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+                  alt="Laptop coding workspace"
+                  loading="lazy"
+                  class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105"
+          />
+          <span class="inline-block bg-red-50 text-red-600 text-xs px-2 py-1 rounded mb-3">Tech</span>
+          <div class="text-sm text-slate-500 mb-2">Sep 2 · 10:00 AM</div>
+          <h3 class="text-slate-900 font-semibold mb-2">Frontend Dev Summit</h3>
+          <div class="text-sm text-slate-500 mb-1">Online</div>
+          <div class="text-sm text-slate-500 mb-4">540 Attendees</div>
+          <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">View
+            Event
+          </button>
+        </article>
+
+        <!-- Business -->
+        <article
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition">
+          <img
+                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786"
+                  alt="Business meeting discussion"
+                  loading="lazy"
+                  class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105"
+          />
+          <span class="inline-block bg-red-50 text-red-600 text-xs px-2 py-1 rounded mb-3">Business</span>
+          <div class="text-sm text-slate-500 mb-2">Sep 10 · 1:00 PM</div>
+          <h3 class="text-slate-900 font-semibold mb-2">Startup Growth Meetup</h3>
+          <div class="text-sm text-slate-500 mb-1">Copenhagen Hub</div>
+          <div class="text-sm text-slate-500 mb-4">210 Attendees</div>
+          <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">View
+            Event
+          </button>
+        </article>
+
+        <!-- Fitness -->
+        <article
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition">
+          <img
+                  src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
+                  alt="People training in gym"
+                  loading="lazy"
+                  class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105"
+          />
+          <span class="inline-block bg-red-50 text-red-600 text-xs px-2 py-1 rounded mb-3">Fitness</span>
+          <div class="text-sm text-slate-500 mb-2">Sep 15 · 6:30 AM</div>
+          <h3 class="text-slate-900 font-semibold mb-2">Morning Bootcamp</h3>
+          <div class="text-sm text-slate-500 mb-1">City Park</div>
+          <div class="text-sm text-slate-500 mb-4">85 Attendees</div>
+          <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">View
+            Event
+          </button>
+        </article>
+
+        <!-- Networking -->
+        <article
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition">
+          <img
+                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                  alt="People networking and talking"
+                  loading="lazy"
+                  class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105"
+          />
+          <span class="inline-block bg-red-50 text-red-600 text-xs px-2 py-1 rounded mb-3">Networking</span>
+          <div class="text-sm text-slate-500 mb-2">Sep 20 · 5:00 PM</div>
+          <h3 class="text-slate-900 font-semibold mb-2">Tech Networking Night</h3>
+          <div class="text-sm text-slate-500 mb-1">Berlin Loft</div>
+          <div class="text-sm text-slate-500 mb-4">190 Attendees</div>
+          <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">View
+            Event
+          </button>
+        </article>
+
+        <!-- Extra Tech -->
+        <article
+                class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition">
+          <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                  alt="Developer coding on laptop"
+                  loading="lazy"
+                  class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 hover:scale-105"
+          />
+          <span class="inline-block bg-red-50 text-red-600 text-xs px-2 py-1 rounded mb-3">Tech</span>
+          <div class="text-sm text-slate-500 mb-2">Oct 1 · 9:00 AM</div>
+          <h3 class="text-slate-900 font-semibold mb-2">AI & Web Conference</h3>
+          <div class="text-sm text-slate-500 mb-1">Helsinki Center</div>
+          <div class="text-sm text-slate-500 mb-4">670 Attendees</div>
+          <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">View
+            Event
+          </button>
+        </article>
+
+      </div>
+
+
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 pt-16 pb-8 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Top Grid -->
+    <div class="grid md:grid-cols-3 gap-10 mb-12">
+
+      <!-- Left: Logo + Description -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 bg-slate-700 rounded flex items-center justify-center">
+            <!-- Calendar Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    d="M8 7V3M16 7V3M4 11h16M5 21h14a2 2 0 002-2V7H3v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <span class="text-white font-semibold text-lg">Event App</span>
+        </div>
+
+        <p class="text-sm mb-6">
+          A modern platform to create, manage, and explore events effortlessly. Built for seamless
+          experiences.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-3">
+          <a href="#"
+             class="w-9 h-9 flex items-center justify-center bg-slate-800 rounded-full hover:bg-red-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300" fill="currentColor"
+                 viewBox="0 0 24 24">
+              <path d="M22 5.92c-.77.35-1.6.58-2.46.69a4.26 4.26 0 001.87-2.35 8.5 8.5 0 01-2.7 1.03 4.24 4.24 0 00-7.23 3.87A12.03 12.03 0 013 4.79a4.24 4.24 0 001.31 5.66 4.2 4.2 0 01-1.92-.53v.05a4.25 4.25 0 003.4 4.16c-.47.13-.97.2-1.48.2-.36 0-.72-.03-1.06-.1a4.26 4.26 0 003.97 2.95A8.52 8.52 0 012 19.54 12.03 12.03 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.35-.02-.53A8.33 8.33 0 0022 5.92z"/>
+            </svg>
+          </a>
+          <a href="#"
+             class="w-9 h-9 flex items-center justify-center bg-slate-800 rounded-full hover:bg-red-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300" fill="currentColor"
+                 viewBox="0 0 24 24">
+              <path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h7v-9H9v-3h3V9.5C12 6.46 13.79 5 16.5 5c1.31 0 2.44.1 2.77.14v3.2h-1.9c-1.49 0-1.78.71-1.78 1.75V12h3.56l-.46 3h-3.1v9h6.08c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5z"/>
+            </svg>
+          </a>
+          <a href="#"
+             class="w-9 h-9 flex items-center justify-center bg-slate-800 rounded-full hover:bg-red-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-300" fill="currentColor"
+                 viewBox="0 0 24 24">
+              <path d="M21.35 11.1c0-5.45-4.43-9.88-9.88-9.88S1.6 5.65 1.6 11.1c0 4.88 3.54 8.94 8.18 9.74v-6.9H7.9v-2.84h1.88V8.41c0-1.85 1.1-2.87 2.78-2.87.81 0 1.66.15 1.66.15v1.83h-.94c-.93 0-1.22.58-1.22 1.18v1.41h2.08l-.33 2.84h-1.75v6.9c4.64-.8 8.18-4.86 8.18-9.74z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="grid grid-cols-2 gap-8">
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-red-500 transition">Home</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">About</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">Features</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-red-500 transition">Blog</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">Help Center</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
+
+      <!-- Copyright -->
+      <p>© 2026 Event App. All rights reserved.</p>
+
+      <!-- Legal / Contact -->
+      <div class="flex items-center gap-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-red-500 transition">Privacy</a>
+        <a href="#" class="hover:text-red-500 transition">Terms</a>
+        <a href="#" class="hover:text-red-500 transition">contact@eventapp.com</a>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+<div id="event-modal"
+     class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+  <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+
+    <!-- Close Button -->
+    <button id="close-modal"
+            class="absolute top-4 right-4 p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+           stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Modal Content -->
+    <div class="p-8">
+      <div id="modal-event-details">
+        <img id="modal-img" src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4" alt="Concert" class="w-full h-64 object-cover rounded-xl mb-6"/>
+        <h2 id="modal-title" class="text-3xl font-bold text-slate-900 mb-2">Summer Music Festival</h2>
+        <div id="modal-meta" class="text-slate-500 mb-6 flex gap-4 text-sm">
+          <span id="modal-date">Aug 24 · 7:00 PM</span>
+          <span id="modal-location">Stockholm Arena</span>
+        </div>
+        <p class="text-slate-600 mb-8 leading-relaxed">
+          Join us for this exciting event! Learn from industry experts, network with fellow enthusiasts,
+          and explore the latest trends. This is a great opportunity to expand your knowledge
+          and be part of a vibrant community.
+        </p>
+      </div>
+
+      <!-- Registration Form -->
+      <div class="border-t border-slate-100 pt-8">
+        <h3 class="text-xl font-semibold mb-4">Register for this Event</h3>
+        <form id="registration-form" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+            <input type="text" id="reg-name" required
+                   class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+            <input type="email" id="reg-email" required
+                   class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition"/>
+          </div>
+          <button type="submit"
+                  class="w-full bg-red-600 text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition shadow-sm">
+            Confirm Registration
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
